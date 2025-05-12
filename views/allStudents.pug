@@ -1,0 +1,16 @@
+html 
+    head 
+        title students page 
+    body 
+        h1 all students
+        table(border=2)
+            thead
+                td first name
+                td last name
+                td gender
+                    tboady 
+                        each student in students 
+                            tr 
+                                td= student.firstname
+                                td= student.lastname
+                                td= student.gender
