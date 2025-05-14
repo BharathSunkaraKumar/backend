@@ -1,0 +1,22 @@
+html 
+    head 
+        title update players 
+    body 
+        h1 update players 
+        p=id
+        form(action=`/players/updateplayer/${id}` method='PUT')
+            input(type='text' name='name' placeholder='name')
+            br
+            input(type='number' name='age' placeholder='age')
+            br
+            input(type='text' name='sport' placeholder='sport')
+            br
+            input(type='text' name='image' placeholder='image')
+            br
+            input(type='text' name='discription' placeholder='discription')
+            br
+            input(type='text' name='playingrole' placeholder='playingrole')
+            br
+            input(type='text' name='country' placeholder='country')
+            br
+            button(type='submit') edit

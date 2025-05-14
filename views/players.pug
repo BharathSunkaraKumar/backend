@@ -1,0 +1,13 @@
+html 
+    head 
+        title players 
+    body 
+        h1 Royal Challengers Bangalore Team 
+        ul 
+            each player in players 
+                a(href=`players/playerDetails/${player.name}`)
+                    li 
+                        img(src=player.image)
+                    li= player.name
+                    li= player.playingrole
+

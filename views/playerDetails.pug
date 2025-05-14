@@ -1,0 +1,16 @@
+html 
+    head 
+        title player details 
+    body 
+        h1 player details
+        ul 
+            each detail in details 
+                li 
+                    img(src=detail.image)
+                li= detail.name
+                li= detail.playingrole
+                li= detail.age
+                li= detail.sport
+                li= detail.country
+                a(href=`/players/update/${detail.id}`) update details
+            
