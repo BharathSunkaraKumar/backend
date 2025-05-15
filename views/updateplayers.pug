@@ -3,20 +3,20 @@ html
         title update players 
     body 
         h1 update players 
-        p=id
-        form(action=`/players/updateplayer/${id}` method='PUT')
-            input(type='text' name='name' placeholder='name')
+        p=player.id
+        form(method='POST' action=`/players/${player._id}?_method=PUT` )
+            input(type='text' name='name' placeholder='name' value=player.name)
             br
-            input(type='number' name='age' placeholder='age')
+            input(type='number' name='age' placeholder='age' value=player.age)
             br
-            input(type='text' name='sport' placeholder='sport')
+            input(type='text' name='sport' placeholder='sport' value=player.sport)
             br
-            input(type='text' name='image' placeholder='image')
+            input(type='text' name='image' placeholder='image' value=player.image)
             br
-            input(type='text' name='discription' placeholder='discription')
+            input(type='text' name='discription' placeholder='discription' value=player.discription)
             br
-            input(type='text' name='playingrole' placeholder='playingrole')
+            input(type='text' name='playingrole' placeholder='playingrole' value=player.playingrole)
             br
-            input(type='text' name='country' placeholder='country')
+            input(type='text' name='country' placeholder='country' value=player.country)
             br
-            button(type='submit') edit
+            button(type='submit') confirm update

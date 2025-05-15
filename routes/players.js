@@ -21,18 +21,20 @@ playersRouter.post('/addplayer', (req, res) => {
     res.redirect('/players')
 })
 
-playersRouter.put('/updateplayer/:id', async(req, res) => {
-    console.log('pit req')
-    // const {name, age, sport, country, image, playingrole, discription} = req.body
-    // const myPlayer = await playerModel.findByIdAndUpdate(
-    //     req.params.id, 
-    //     {name, age, sport, country, image, playingrole, discription}
-    // )
-    // console.log(myPlayer)
-    res.send('updated')
+playersRouter.get('/:id/edit', async(req, res) => {
+    let player = await playerModel.findById(req.params.id);
+    console.log(player)
+    res.render('updateplayers', {player})
 })
-playersRouter.get('/update/:id', (req, res) => {
-    res.render('updateplayers', {id: req.params.id})
+
+playersRouter.put('/:id', async(req, res) => {
+    let updatedPlayer = await playerModel.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('/players')
+})
+
+playersRouter.delete('/:id', async(req, res) => {
+    let deletePlayer = await playerModel.findByIdAndDelete(req.params.id);
+    res.redirect('/players')
 })
 
 

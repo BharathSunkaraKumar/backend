@@ -2,10 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const app = express();
+const methodOverride = require('method-override');
 const PORT = 3000;
 
 //pug
 app.set('view engine', 'pug');
+
+//method-override
+app.use(methodOverride('_method'))
 
 //bodyparser
 app.use(express.static(__dirname+'/public'))

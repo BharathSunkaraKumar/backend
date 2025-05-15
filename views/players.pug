@@ -10,4 +10,6 @@ html
                         img(src=player.image)
                     li= player.name
                     li= player.playingrole
+                    form(method="POST", action=`/players/${player.id}?_method=DELETE`)
+                        button(type='submit') delete player
 
