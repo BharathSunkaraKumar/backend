@@ -1,16 +1,21 @@
 html 
     head 
         title player details 
+        style 
+         include style.css
     body 
-        h1 player details
-        ul 
-            each detail in details 
-                li 
-                    img(src=detail.image)
-                li= detail.name
-                li= detail.playingrole
-                li= detail.age
-                li= detail.sport
-                li= detail.country
-                a(href=`/players/${detail.id}/edit`) update details
-            
+            ul 
+                each detail in details 
+
+                    div(class='details') 
+                        div 
+                            li 
+                                img(src=detail.image)
+                        div 
+                            li= detail.name
+                            li= detail.playingrole
+                            li= detail.age
+                            li= detail.sport
+                            li= detail.country
+                            a(href=`/players/${detail.id}/edit`) update details
+                

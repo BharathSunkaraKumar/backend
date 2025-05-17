@@ -1,0 +1,16 @@
+html 
+    head    
+        title register page 
+        style 
+         include style.css
+    body 
+        div(class='rpage')
+            h1 Register Page
+            form(action='/register' method='post')
+                input(type='text' name='username' placeholder='name')
+                br
+                input(type='text' name='email' placeholder='email')
+                br
+                input(type='text' name='password' placeholder='password')
+                br
+                button(type='submit') submit

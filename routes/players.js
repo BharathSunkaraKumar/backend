@@ -1,5 +1,6 @@
 const express = require('express');
 const playersRouter = express.Router();
+const checkAuth = require('../app');
 const playerModel = require('../model/players.model')
 // const collection = database.collection('testcollection')
 playersRouter.get('/', (req, res) => {

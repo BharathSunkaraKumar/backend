@@ -1,0 +1,14 @@
+html 
+    head    
+        title login page 
+        style 
+         include style.css
+    body 
+        div(class='rpage')
+            h1 Login Page
+            form(action='/user-login' method='post')
+                input(type='text' name='email' placeholder='email')
+                br
+                input(type='text' name='password' placeholder='password')
+                br
+                button(type='submit') submit
